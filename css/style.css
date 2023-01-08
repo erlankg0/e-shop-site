@@ -1,29 +1,42 @@
-html{
- box-sizing: border-box;
+html {
+    box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
 ul,
-li{
+li {
     list-style: none;
     margin: 0;
     padding: 0;
 
 }
-h1,h2,h3,h4,h5,h6{
+
+p {
     margin: 0;
     padding: 0;
 }
 
-body{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
     color: #2F3035;
     font-family: 'SFProDisplay-Regular', sans-serif;
     font-weight: normal;
@@ -37,103 +50,270 @@ body{
 container
  */
 
-.container{
-    max-width: 1200px; /* 1200px максимальная длина */
-    margin: 0 auto; /* автоматический отступ слева и справа (центрирования)*/
-    padding: 0 15px; /* отступы слева и справа */
+.container {
+    max-width: 1200px;
+    /* 1200px максимальная длина */
+    margin: 0 auto;
+    /* автоматический отступ слева и справа (центрирования)*/
+    padding: 0 15px;
+    /* отступы слева и справа */
 }
 
 /* 
 header__top-inner
 */
 
-.header__top-inner{
-    display: flex; /* flex - свойство для выравнивания элементов по горизонтали */
-    justify-content: space-between; /* space-between - свойство для выравнивания элементов по горизонтали */
-    align-items: center; /* align-items - свойство для выравнивания элементов по вертикали */
-    padding: 20px 0; /* отступы сверху 20px */
-    font-weight: bold; /* жирный шрифт */
+.header__top-inner {
+    display: flex;
+    /* flex - свойство для выравнивания элементов по горизонтали */
+    justify-content: space-between;
+    /* space-between - свойство для выравнивания элементов по горизонтали */
+    align-items: center;
+    /* align-items - свойство для выравнивания элементов по вертикали */
+    padding: 20px 0;
+    /* отступы сверху 20px */
+    font-weight: bold;
+    /* жирный шрифт */
 }
 
-.menu__item{
-    display: inline-block; /* inline-block - свойство для выравнивания элементов по горизонтали */ 
+.menu__item {
+    display: inline-block;
+    /* inline-block - свойство для выравнивания элементов по горизонтали */
 }
 
-.menu__item + .menu__item{ /* + - селектор соседа */ 
-    padding-left: 50px; /* отступ слева 50px */
+.menu__item+.menu__item {
+    /* + - селектор соседа */
+    padding-left: 50px;
+    /* отступ слева 50px */
 }
 
-.header__box{
-    display: flex; /* flex - свойство для выравнивания элементов по горизонтали */
+.header__box {
+    display: flex;
+    /* flex - свойство для выравнивания элементов по горизонтали */
 }
 
-.header__address{
-    margin-right: 20px; /* отступ справа 20px */
-    width: 265; /* ширина 265px */
-    padding-left: 30px; /* отступ слева 50px */
-    position: relative; /* position - свойство для позиционирования элементов */
+.header__address {
+    margin-right: 20px;
+    /* отступ справа 20px */
+    width: 265;
+    /* ширина 265px */
+    padding-left: 30px;
+    /* отступ слева 50px */
+    position: relative;
+    /* position - свойство для позиционирования элементов */
 }
 
-.header__address::before{
-    content: ''; /* content - свойство для добавления контента */
-    position: absolute; /* position - свойство для позиционирования элементов */
-    top: 0; /* top - свойство для позиционирования элементов */
-    left: 0; /* left - свойство для позиционирования элементов */
-    width: 30px; /* ширина 30px */
-    height: 30px; /* высота 30px */
-    background: url("../images/header/location.svg") no-repeat center; /* background - свойство для добавления фона */
+.header__address::before {
+    content: '';
+    /* content - свойство для добавления контента */
+    position: absolute;
+    /* position - свойство для позиционирования элементов */
+    top: 0;
+    /* top - свойство для позиционирования элементов */
+    left: 0;
+    /* left - свойство для позиционирования элементов */
+    width: 30px;
+    /* ширина 30px */
+    height: 30px;
+    /* высота 30px */
+    background: url("../images/header/location.svg") no-repeat center;
+    /* background - свойство для добавления фона */
 }
 
-.user-list{
-    margin-right: 15px; /* отступ справа 10px */
+.user-list {
+    margin-right: 15px;
+    /* отступ справа 10px */
 }
 
-.user-list__item{
-    display: inline-block; /* inline-block - свойство для выравнивания элементов по горизонтали */
-    padding-right: 10px; /* отступ справа 10px */
+.user-list__item {
+    display: inline-block;
+    /* inline-block - свойство для выравнивания элементов по горизонтали */
+    padding-right: 10px;
+    /* отступ справа 10px */
 }
 
-.basket{
-    position: relative; /* position - свойство для позиционирования элементов */
+.basket {
+    position: relative;
+    /* position - свойство для позиционирования элементов */
 }
-.basket__count{
-    position: absolute; /* position - свойство для позиционирования элементов */
-    font-weight: 500; /* средний жирный шрифт */
-    font-size: 12px; /* размер шрифта 12px */
-    line-height: 14px; /* высота строки 14px */
-    color: #FFFFFF; /* цвет белый */
-    background: #1c62cd; /* цвет фона */
-    border-radius: 50%; /* border-radius - свойство для скругления углов */
-    width: 15px; /* ширина 20px */
-    height: 15px; /* высота 20px */
-    text-align: center; /* text-align - свойство для выравнивания текста по центру */
-    top: -10px; /* top - свойство для позиционирования элементов */
-    right: -10px; /* right - свойство для позиционирования элементов */
-    bottom: 0; /* bottom - свойство для позиционирования элементов */
+
+.basket__count {
+    position: absolute;
+    /* position - свойство для позиционирования элементов */
+    font-weight: 500;
+    /* средний жирный шрифт */
+    font-size: 12px;
+    /* размер шрифта 12px */
+    line-height: 14px;
+    /* высота строки 14px */
+    color: #FFFFFF;
+    /* цвет белый */
+    background: #1c62cd;
+    /* цвет фона */
+    border-radius: 50%;
+    /* border-radius - свойство для скругления углов */
+    width: 15px;
+    /* ширина 20px */
+    height: 15px;
+    /* высота 20px */
+    text-align: center;
+    /* text-align - свойство для выравнивания текста по центру */
+    top: -10px;
+    /* top - свойство для позиционирования элементов */
+    right: -10px;
+    /* right - свойство для позиционирования элементов */
+    bottom: 0;
+    /* bottom - свойство для позиционирования элементов */
 }
 
 /* header__bottom*/
 
-.header__bottom-inner{
-    background: #F0F0F4; /* цвет фона */
+.header__bottom-inner {
+    background: #F0F0F4;
+    /* цвет фона */
 }
 
-.menu-categories{
-    display: flex; /* flex - свойство для выравнивания элементов по горизонтали */
-    justify-content: space-around; /* space-around */
+.menu-categories {
+    display: flex;
+    /* flex - свойство для выравнивания элементов по горизонтали */
+    justify-content: space-evenly;
+    /* space-around */
     min-height: 53px;
-    align-items: center; /* align-items - свойство для выравнивания элементов по вертикали */
+    align-items: center;
+    /* align-items - свойство для выравнивания элементов по вертикали */
 }
 
-.menu-categories__link{
-    transition: all .03s; /* transition - свойство для анимации */
+/*очень плавная анимация для .menu-categories__link*/
+.menu-categories__link {
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-categories__link:hover {
+    color: #1c62cd;
+    /* цвет фона */
     font-weight: 400;
-    padding: 15px 0px 14px;
+    /* средний жирный шрифт */
+    border-bottom: 3px solid #1c62cd;
+    /* цвет фона */
+
 }
 
-.menu-categories__link:hover{
-    color: #1c62cd; /* цвет фона */
-    font-weight: 600;
-    border-bottom: 3px solid #1c62cd; /* цвет фона */
+.menu-categories__link:active {
+    color: #1c62cd;
+    /* цвет фона */
+    font-weight: 400;
+    /* средний жирный шрифт */
+    border-bottom: 3px solid #1c62cd;
+    /* цвет фона */
+}
 
+/* section banner*/
+.banner-section__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0;
+
+}
+
+.banner-section__slider {
+    max-width: 870px;
+    position: relative;
+    margin-right: 50px;
+}
+
+
+.banner-section__slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.banner-section__slider-btnprev {
+    left: 20px;
+}
+
+.banner-section__slider-btnnext {
+    right: 20px;
+}
+
+.banner-section__slider-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.sale-item {
+    border: 1px solid #CDCDCD;
+    border-radius: 3px;
+    max-width: 265px;
+    text-align: center;
+}
+
+.sale-item__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sale-item__info {
+    color: #FFFF;
+    background-color: #1c62cd;
+    padding: 8px 20px;
+    font-family: 'Proxima Nova';
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.sate-item__bottom {
+    background: #F0F0F4;
+}
+
+.price {
+    font-family: 'Barlow' sans-serif;
+    font-style: normal;
+}
+
+.sale-item__price_new {
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 32px;
+    /* identical to box height */
+    letter-spacing: 0.1em;
+    /* акцент */
+    color: #1C62CD;
+}
+
+.sale-item__price_new::after {
+    content: " ₽";
+}
+
+.sale-item__price_old {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    letter-spacing: 0.1em;
+
+
+    /* светло серый текст */
+
+    color: #C4C4C4;
+}
+
+.sale-item__price_old::after {
+    content: " ₽";
+}
+
+.sale-item__bottom {
+    background-color: #F0F0F4;
+    padding: 25px 20px;
 }
