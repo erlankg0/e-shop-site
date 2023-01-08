@@ -1,0 +1,139 @@
+html{
+ box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: #2F3035;
+    font-family: 'SFProDisplay-Regular', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+    font-style: normal;
+}
+
+/* 
+container
+ */
+
+.container{
+    max-width: 1200px; /* 1200px максимальная длина */
+    margin: 0 auto; /* автоматический отступ слева и справа (центрирования)*/
+    padding: 0 15px; /* отступы слева и справа */
+}
+
+/* 
+header__top-inner
+*/
+
+.header__top-inner{
+    display: flex; /* flex - свойство для выравнивания элементов по горизонтали */
+    justify-content: space-between; /* space-between - свойство для выравнивания элементов по горизонтали */
+    align-items: center; /* align-items - свойство для выравнивания элементов по вертикали */
+    padding: 20px 0; /* отступы сверху 20px */
+    font-weight: bold; /* жирный шрифт */
+}
+
+.menu__item{
+    display: inline-block; /* inline-block - свойство для выравнивания элементов по горизонтали */ 
+}
+
+.menu__item + .menu__item{ /* + - селектор соседа */ 
+    padding-left: 50px; /* отступ слева 50px */
+}
+
+.header__box{
+    display: flex; /* flex - свойство для выравнивания элементов по горизонтали */
+}
+
+.header__address{
+    margin-right: 20px; /* отступ справа 20px */
+    width: 265; /* ширина 265px */
+    padding-left: 30px; /* отступ слева 50px */
+    position: relative; /* position - свойство для позиционирования элементов */
+}
+
+.header__address::before{
+    content: ''; /* content - свойство для добавления контента */
+    position: absolute; /* position - свойство для позиционирования элементов */
+    top: 0; /* top - свойство для позиционирования элементов */
+    left: 0; /* left - свойство для позиционирования элементов */
+    width: 30px; /* ширина 30px */
+    height: 30px; /* высота 30px */
+    background: url("../images/header/location.svg") no-repeat center; /* background - свойство для добавления фона */
+}
+
+.user-list{
+    margin-right: 15px; /* отступ справа 10px */
+}
+
+.user-list__item{
+    display: inline-block; /* inline-block - свойство для выравнивания элементов по горизонтали */
+    padding-right: 10px; /* отступ справа 10px */
+}
+
+.basket{
+    position: relative; /* position - свойство для позиционирования элементов */
+}
+.basket__count{
+    position: absolute; /* position - свойство для позиционирования элементов */
+    font-weight: 500; /* средний жирный шрифт */
+    font-size: 12px; /* размер шрифта 12px */
+    line-height: 14px; /* высота строки 14px */
+    color: #FFFFFF; /* цвет белый */
+    background: #1c62cd; /* цвет фона */
+    border-radius: 50%; /* border-radius - свойство для скругления углов */
+    width: 15px; /* ширина 20px */
+    height: 15px; /* высота 20px */
+    text-align: center; /* text-align - свойство для выравнивания текста по центру */
+    top: -10px; /* top - свойство для позиционирования элементов */
+    right: -10px; /* right - свойство для позиционирования элементов */
+    bottom: 0; /* bottom - свойство для позиционирования элементов */
+}
+
+/* header__bottom*/
+
+.header__bottom-inner{
+    background: #F0F0F4; /* цвет фона */
+}
+
+.menu-categories{
+    display: flex; /* flex - свойство для выравнивания элементов по горизонтали */
+    justify-content: space-around; /* space-around */
+    min-height: 53px;
+    align-items: center; /* align-items - свойство для выравнивания элементов по вертикали */
+}
+
+.menu-categories__link{
+    transition: all .03s; /* transition - свойство для анимации */
+    font-weight: 400;
+    padding: 15px 0px 14px;
+}
+
+.menu-categories__link:hover{
+    color: #1c62cd; /* цвет фона */
+    font-weight: 600;
+    border-bottom: 3px solid #1c62cd; /* цвет фона */
+
+}
