@@ -317,3 +317,29 @@ header__top-inner
     background-color: #F0F0F4;
     padding: 25px 20px;
 }
+
+.sale-item__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+
+    /* Основной текст */
+
+    color: #2F3035;
+}
+.sale-item__date {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    /* Основной текст */
+
+    color: #1C62CD;
+}
+
+.sale-item__body{
+    margin: 10px;
+}
